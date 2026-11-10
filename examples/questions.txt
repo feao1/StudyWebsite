@@ -1,0 +1,13 @@
+Title: My practice set
+Question: Which word best completes the sentence?
+Passage: The researcher checked every measurement twice. Her approach was ____.
+A: careless
+B: meticulous
+C: hasty
+D: indifferent
+Answer: B
+Explanation: Meticulous means showing great attention to detail.
+---
+Question: If 2x + 4 = 10, what is x?
+Answer: 3
+Explanation: Subtract 4, then divide by 2.
