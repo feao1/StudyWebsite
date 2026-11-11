@@ -1,4 +1,4 @@
-# PrepBook
+# CommonStudy
 
 A static, shareable SAT study workbook. IBM Plex Serif and Sans, ink and paper, responsive numbered practice index. Includes the existing SAT practice tests 4–11 and all four practice modes.
 
@@ -16,6 +16,6 @@ Use **Import a set** with `.qpack` or `.txt`. Examples are in `examples/`. Text 
 
 ## Sharing and storage
 
-Share next to a module copies its link. Included modules use short URLs. Imported modules up to 60 KB are encoded in the URL fragment; recipients can study without an account. Larger sets should be shared as files. Shared imports do not overwrite saved packs. Results and imports remain browser-local; they do not synchronize across devices or domains. Existing PrepBook storage keys and schemas are retained, but browser storage on an old domain remains there.
+Share next to a module copies its link. Included modules use short URLs. Imported modules up to 60 KB are encoded in the URL fragment; recipients can study without an account. Larger sets should be shared as files. Shared imports do not overwrite saved packs. Results and imports remain browser-local; they do not synchronize across devices or domains. Existing CommonStudy storage keys and schemas are retained, but browser storage on an old domain remains there.
 
 Fonts load from Google Fonts. No frontend build or server backend is required.

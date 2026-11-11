@@ -1,0 +1,277 @@
+QPACK/1
+{
+  "id": "commonstudy-inverse-trig-derivatives",
+  "title": "Inverse trig derivatives",
+  "source": "CommonStudy · Calculus",
+  "sets": [
+    {
+      "id": "commonstudy-inverse-trig-derivatives-set",
+      "title": "Inverse trig derivatives",
+      "section": "Calculus",
+      "timeLimitMinutes": 20,
+      "questions": [
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q1",
+          "number": 1,
+          "prompt": "d/dx arcsin(x), |x| < 1",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/√(1 − x²)"
+            },
+            {
+              "id": "B",
+              "text": "−1/√(1 − x²)"
+            },
+            {
+              "id": "C",
+              "text": "1/(1 + x²)"
+            },
+            {
+              "id": "D",
+              "text": "1/√(x² − 1)"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "The derivative of arcsin(x) is (1 − x²)^(−1/2)."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q2",
+          "number": 2,
+          "prompt": "d/dx arccos(x), |x| < 1",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/√(1 − x²)"
+            },
+            {
+              "id": "B",
+              "text": "−1/√(1 − x²)"
+            },
+            {
+              "id": "C",
+              "text": "−1/(1 + x²)"
+            },
+            {
+              "id": "D",
+              "text": "1/(1 − x²)"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "Arccos has the negative of the arcsin derivative."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q3",
+          "number": 3,
+          "prompt": "d/dx arctan(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/√(1 − x²)"
+            },
+            {
+              "id": "B",
+              "text": "−1/(1 + x²)"
+            },
+            {
+              "id": "C",
+              "text": "1/(1 + x²)"
+            },
+            {
+              "id": "D",
+              "text": "1/(1 − x²)"
+            }
+          ],
+          "correctChoiceID": "C",
+          "explanation": "Use the inverse tangent derivative. Its domain is all real x."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q4",
+          "number": 4,
+          "prompt": "d/dx arccot(x), using the range (0, π)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/(1 + x²)"
+            },
+            {
+              "id": "B",
+              "text": "−1/√(1 − x²)"
+            },
+            {
+              "id": "C",
+              "text": "1/x"
+            },
+            {
+              "id": "D",
+              "text": "−1/(1 + x²)"
+            }
+          ],
+          "correctChoiceID": "D",
+          "explanation": "Under this convention arccot is decreasing."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q5",
+          "number": 5,
+          "prompt": "d/dx arcsec(x), |x| > 1",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/(|x|√(x² − 1))"
+            },
+            {
+              "id": "B",
+              "text": "1/(x√(1 − x²))"
+            },
+            {
+              "id": "C",
+              "text": "−1/(|x|√(x² − 1))"
+            },
+            {
+              "id": "D",
+              "text": "1/(1 + x²)"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "For the standard principal arcsec branch, retain the absolute value of x."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q6",
+          "number": 6,
+          "prompt": "d/dx arccsc(x), |x| > 1",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/(|x|√(x² − 1))"
+            },
+            {
+              "id": "B",
+              "text": "−1/(|x|√(x² − 1))"
+            },
+            {
+              "id": "C",
+              "text": "−1/√(1 − x²)"
+            },
+            {
+              "id": "D",
+              "text": "1/(x² − 1)"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "For the standard principal arccsc branch, the derivative is negative and includes |x|."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q7",
+          "number": 7,
+          "prompt": "d/dx arcsin(3x), |x| < 1/3",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/√(1 − 9x²)"
+            },
+            {
+              "id": "B",
+              "text": "3/√(1 − 3x²)"
+            },
+            {
+              "id": "C",
+              "text": "3/√(1 − 9x²)"
+            },
+            {
+              "id": "D",
+              "text": "−3/√(1 − 9x²)"
+            }
+          ],
+          "correctChoiceID": "C",
+          "explanation": "Apply u′/√(1 − u²) with u = 3x."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q8",
+          "number": 8,
+          "prompt": "d/dx arctan(x²)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "2x/(1 + x²)"
+            },
+            {
+              "id": "B",
+              "text": "1/(1 + x⁴)"
+            },
+            {
+              "id": "C",
+              "text": "2/(1 + x⁴)"
+            },
+            {
+              "id": "D",
+              "text": "2x/(1 + x⁴)"
+            }
+          ],
+          "correctChoiceID": "D",
+          "explanation": "u = x², so u′ = 2x and u² = x⁴."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q9",
+          "number": 9,
+          "prompt": "d/dx arccos(√x), 0 < x < 1",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "−1/(2√x√(1 − x))"
+            },
+            {
+              "id": "B",
+              "text": "1/(2√x√(1 − x))"
+            },
+            {
+              "id": "C",
+              "text": "−1/√(1 − x)"
+            },
+            {
+              "id": "D",
+              "text": "−√x/(2√(1 − x))"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "Multiply −1/√(1 − u²) by u′ = 1/(2√x)."
+        },
+        {
+          "id": "commonstudy-inverse-trig-derivatives-q10",
+          "number": 10,
+          "prompt": "If f(x) = arctan(2x), find f′(1).",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "1/5"
+            },
+            {
+              "id": "B",
+              "text": "2/5"
+            },
+            {
+              "id": "C",
+              "text": "2/3"
+            },
+            {
+              "id": "D",
+              "text": "1/2"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "f′(x) = 2/(1 + 4x²); at x = 1 this is 2/5."
+        }
+      ]
+    }
+  ]
+}
+

@@ -1,14 +1,14 @@
-/* PrepBook Local — a zero-dependency, local-first SAT practice app. */
+/* CommonStudy Local — a zero-dependency, local-first SAT practice app. */
 const app = document.querySelector('#app');
 const picker = document.querySelector('#pack-picker');
 const STORE = { settings: 'prepbook.local.settings', history: 'prepbook.local.history' };
 const MODES = {
-  timed: { name: 'Timed test', description: 'Module clock, explanations at the end.' },
-  practice: { name: 'Untimed practice', description: 'No timer; review explanations at the end.' },
-  feedback: { name: 'Immediate feedback', description: 'Check each response before continuing.' },
-  review: { name: 'Review & learn', description: 'Answers and explanations are shown as you work.' }
+  feedback: { name: 'Instant Feedback', description: 'Check each response before continuing.' },
+  review: { name: 'Review', description: 'Answers and explanations are shown as you work.' },
+  practice: { name: 'Untimed Test', description: 'No timer; review explanations at the end.' },
+  timed: { name: 'Timed test', description: 'Module clock, explanations at the end.' }
 };
-const BUILTIN_PACKS = [4, 5, 6, 7, 8, 9, 10, 11].map(number => `packs/SAT-Practice-Test-${number}.qpack`);
+const BUILTIN_PACKS = [...[4, 5, 6, 7, 8, 9, 10, 11].map(number => `packs/SAT-Practice-Test-${number}.qpack`), ...['Inverse-Trig-Derivatives', 'Trig-Derivatives', 'Calculus-Radicals'].map(name => `packs/${name}.qpack`)];
 let packs = [];
 const builtinIDs = new Set();
 let selectedMode = 'timed';
@@ -81,7 +81,7 @@ function answerDisplay(question, answer) { if (!answer) return 'Not answered'; i
 function correctDisplay(question) { return isText(question) ? question.acceptedAnswers.join(' or ') : question.correctChoiceID; }
 
 async function bootstrap() {
-  app.innerHTML = '<main class="content"><p>Loading PrepBook…</p></main>';
+  app.innerHTML = '<main class="content"><p>Loading CommonStudy…</p></main>';
   try {
     const sources = await Promise.all(BUILTIN_PACKS.map(async path => {
       const response = await fetch(path);
@@ -98,7 +98,7 @@ async function bootstrap() {
 }
 
 function shell(body) {
-  return `<div class="shell"><aside class="sidebar"><div class="brand"><strong>PREPBOOK</strong><small>Digital SAT practice</small></div><nav class="nav">
+  return `<div class="shell"><aside class="sidebar"><div class="brand"><strong>CommonStudy</strong><small>SAT & calculus practice</small></div><nav class="nav">
     <button data-route="home" class="${route === 'home' ? 'active' : ''}">Practice sets</button>
     <button data-route="library" class="${route === 'library' ? 'active' : ''}">Question library</button>
     <button data-route="history" class="${route === 'history' ? 'active' : ''}">Recent results</button>
@@ -117,7 +117,7 @@ function render() {
   if (route === 'settings') app.innerHTML = shell(settingsView());
 }
 function home() {
-  return `<header class="top"><div><div class="eyebrow">Practice index / Reading and Writing · Math</div><h1>Choose a practice set.</h1><p class="lede">SAT practice tests 4–11. Reading and Writing. Math.</p></div><button class="primary" data-action="pick">Import a set</button></header>
+  return `<header class="top"><div><div class="eyebrow">Practice index / SAT · Calculus · Your sets</div><h1>Choose a practice set.</h1><p class="lede">SAT practice tests 4–11. Three calculus sets with worked explanations. Import your own questions.</p></div><button class="primary" data-action="pick">Import a set</button></header>
   <section class="section"><div class="section-head"><h2>Practice sets</h2><span>${packs.length} packs available</span></div><div class="test-index">${packs.map(packCard).join('')}</div></section>`;
 }
 function chooseSet(packID, setID) {
@@ -138,7 +138,7 @@ function modePicker() {
 function packCard(pack, index) { const number = pack.title.match(/(?:Test|test)\s*(\d+)/)?.[1]; return `<article class="index-entry"><div class="test-number">${number ? number.padStart(2,'0') : String(index+1).padStart(2,'0')}</div><div class="test-body"><div class="pack-meta"><span>${esc(pack.source || 'Imported set')}</span><span>${packCount(pack)} questions</span></div><h3>${esc(pack.title)}</h3>${pack.sets.map(set => `<div class="module-row"><button class="module" data-action="start" data-pack="${id(pack.id)}" data-set="${id(set.id)}"><strong>${esc(set.title)}</strong><span>${esc([set.section, `${set.questions.length} questions`].filter(Boolean).join(' · '))}</span></button><button class="share" data-action="share" data-pack="${id(pack.id)}" data-set="${id(set.id)}" aria-label="Share ${esc(set.title)}">Share</button></div>`).join('')}</div></article>`; }
 function library() { return `<header class="top"><div><div class="eyebrow">Source material</div><h1>Question library</h1><p class="lede">Import QPACK files or plain-text study sets. Imports are saved in this browser.</p></div><button class="primary" data-action="pick">Import a set</button></header><section class="section import-help"><h2>Text file format</h2><p>Use question blocks with answers and optional passages, or one term and definition per line separated by a tab. Files are validated before they are saved.</p><p><a href="examples/questions.txt" download>Download question template</a> · <a href="examples/terms.txt" download>Download term template</a></p></section><section class="section"><div class="library-list">${packs.map(pack => `<div class="list-row"><div><strong>${esc(pack.title)}</strong><span>${pack.sets.length} modules · ${packCount(pack)} questions</span></div>${builtinIDs.has(pack.id) ? '<span>Included</span>' : `<button data-action="remove" data-pack="${id(pack.id)}">Remove</button>`}</div>`).join('')}</div></section>`; }
 function history() { const items = readJSON(STORE.history, []); return `<header class="top"><div><div class="eyebrow">Study record</div><h1>Recent results</h1><p class="lede">Completed module results are saved in this browser.</p></div></header><section class="section">${items.length ? `<div class="history">${items.map(item => `<div class="list-row"><div><strong>${esc(item.setTitle)}</strong><span>${new Date(item.completedAt).toLocaleString()}${item.flagged ? ` · ${item.flagged} flagged` : ''}</span></div><strong>${item.correct} / ${item.total}</strong></div>`).join('')}</div>` : '<div class="empty">No completed modules yet. Finish a set to create a local result history.</div>'}</section>`; }
-function settingsView() { return `<header class="top settings"><div><div class="eyebrow">Personalize PrepBook</div><h1>Settings</h1><p class="lede">These options are saved locally in this browser.</p></div></header><section class="section settings"><div class="setting"><label>Show countdown in timed mode <input type="checkbox" data-setting="timer" ${settings.showTimer ? 'checked' : ''}></label><p>Hides or shows the SAT-style clock; it does not stop timed sessions.</p></div><div class="setting"><label>Question text size <span id="font-size">${Math.round(settings.fontScale * 100)}%</span></label><input type="range" min="0.85" max="1.35" step="0.05" value="${settings.fontScale}" data-setting="font"><p>Changes the readable size of questions and explanations.</p></div></section>`; }
+function settingsView() { return `<header class="top settings"><div><div class="eyebrow">Personalize CommonStudy</div><h1>Settings</h1><p class="lede">These options are saved locally in this browser.</p></div></header><section class="section settings"><div class="setting"><label>Show countdown in timed mode <input type="checkbox" data-setting="timer" ${settings.showTimer ? 'checked' : ''}></label><p>Hides or shows the SAT-style clock; it does not stop timed sessions.</p></div><div class="setting"><label>Question text size <span id="font-size">${Math.round(settings.fontScale * 100)}%</span></label><input type="range" min="0.85" max="1.35" step="0.05" value="${settings.fontScale}" data-setting="font"><p>Changes the readable size of questions and explanations.</p></div></section>`; }
 
 function startSession(packID, setID) {
   const pack = packs.find(item => item.id === packID); const set = pack?.sets.find(item => item.id === setID); if (!set) return toast('That module could not be found.');
@@ -159,7 +159,7 @@ function clock(seconds) { const s = Math.max(0, seconds); return `${String(Math.
 function startTimer() { clearInterval(timerHandle); timerHandle = setInterval(() => { if (!session || route !== 'exam') return clearInterval(timerHandle); session.seconds = Math.max(0, Math.ceil((session.deadline - Date.now()) / 1000)); const timer = document.querySelector('#timer'); if (timer) { timer.textContent = clock(session.seconds); timer.classList.toggle('warning', session.seconds <= 300); } if (session.seconds <= 0) finishSession(); }, 1000); }
 function answeredCount() { return Object.values(session.answers).filter(nonempty).length; }
 function finishSession() { clearInterval(timerHandle); session.checked = session.set.questions.map(q => q.id); const result = { id: crypto.randomUUID(), setTitle: session.set.title, correct: session.set.questions.filter(q => correct(q, session.answers[q.id])).length, total: session.set.questions.length, flagged: session.flagged.length, completedAt: new Date().toISOString() }; const history = readJSON(STORE.history, []); history.unshift(result); saveJSON(STORE.history, history.slice(0, 100)); route = 'review'; render(); }
-function renderReview() { const total = session.set.questions.length; const correctCount = session.set.questions.filter(q => correct(q, session.answers[q.id])).length; app.innerHTML = `<div class="exam"><header class="exam-header"><div class="exam-title">PrepBook · Module review</div></header><main class="end-review"><header class="review-head"><div><h1>Review your answers.</h1><p>${esc(session.set.title)}</p><div class="exam-subtitle">${esc(session.packTitle)} · ${total} questions</div></div><div class="score">${correctCount} / ${total}<small>correct</small></div></header>${session.set.questions.map(q => { const ok = correct(q, session.answers[q.id]); return `<details class="review-question"><summary><span class="${ok ? 'ok' : 'wrong'}">${ok ? 'Correct' : 'Incorrect'}</span> Question ${q.number}${session.flagged.includes(q.id) ? '<span class="flagged">Flagged</span>' : ''}</summary><div class="review-detail"><strong>${esc(q.prompt)}</strong><p>Your answer: ${esc(answerDisplay(q, session.answers[q.id]))}</p><p class="ok">Correct answer: ${esc(correctDisplay(q))}</p>${q.explanation ? `<p>${esc(q.explanation)}</p>` : ''}</div></details>`; }).join('')}<div class="review-head"><button class="primary" data-action="done">Back to home</button></div></main></div>`; }
+function renderReview() { const total = session.set.questions.length; const correctCount = session.set.questions.filter(q => correct(q, session.answers[q.id])).length; app.innerHTML = `<div class="exam"><header class="exam-header"><div class="exam-title">CommonStudy · Module review</div></header><main class="end-review"><header class="review-head"><div><h1>Review your answers.</h1><p>${esc(session.set.title)}</p><div class="exam-subtitle">${esc(session.packTitle)} · ${total} questions</div></div><div class="score">${correctCount} / ${total}<small>correct</small></div></header>${session.set.questions.map(q => { const ok = correct(q, session.answers[q.id]); return `<details class="review-question"><summary><span class="${ok ? 'ok' : 'wrong'}">${ok ? 'Correct' : 'Incorrect'}</span> Question ${q.number}${session.flagged.includes(q.id) ? '<span class="flagged">Flagged</span>' : ''}</summary><div class="review-detail"><strong>${esc(q.prompt)}</strong><p>Your answer: ${esc(answerDisplay(q, session.answers[q.id]))}</p><p class="ok">Correct answer: ${esc(correctDisplay(q))}</p>${q.explanation ? `<p>${esc(q.explanation)}</p>` : ''}</div></details>`; }).join('')}<div class="review-head"><button class="primary" data-action="done">Back to home</button></div></main></div>`; }
 
 app.addEventListener('click', async event => {
   const target = event.target.closest('button'); if (!target) return;

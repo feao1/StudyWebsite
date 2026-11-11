@@ -1,0 +1,277 @@
+QPACK/1
+{
+  "id": "commonstudy-trig-derivatives",
+  "title": "Trig derivatives",
+  "source": "CommonStudy · Calculus",
+  "sets": [
+    {
+      "id": "commonstudy-trig-derivatives-set",
+      "title": "Trig derivatives",
+      "section": "Calculus",
+      "timeLimitMinutes": 20,
+      "questions": [
+        {
+          "id": "commonstudy-trig-derivatives-q1",
+          "number": 1,
+          "prompt": "d/dx sin(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "cos(x)"
+            },
+            {
+              "id": "B",
+              "text": "−cos(x)"
+            },
+            {
+              "id": "C",
+              "text": "sin(x)"
+            },
+            {
+              "id": "D",
+              "text": "−sin(x)"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "Angles are measured in radians. The derivative of sine is cosine."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q2",
+          "number": 2,
+          "prompt": "d/dx cos(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "sin(x)"
+            },
+            {
+              "id": "B",
+              "text": "−sin(x)"
+            },
+            {
+              "id": "C",
+              "text": "cos(x)"
+            },
+            {
+              "id": "D",
+              "text": "−cos(x)"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "The derivative of cosine is negative sine."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q3",
+          "number": 3,
+          "prompt": "d/dx tan(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "csc²(x)"
+            },
+            {
+              "id": "B",
+              "text": "−sec²(x)"
+            },
+            {
+              "id": "C",
+              "text": "sec²(x)"
+            },
+            {
+              "id": "D",
+              "text": "sec(x)tan(x)"
+            }
+          ],
+          "correctChoiceID": "C",
+          "explanation": "Differentiate sin(x)/cos(x) and use sin²(x) + cos²(x) = 1."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q4",
+          "number": 4,
+          "prompt": "d/dx cot(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "csc²(x)"
+            },
+            {
+              "id": "B",
+              "text": "sec²(x)"
+            },
+            {
+              "id": "C",
+              "text": "−cot(x)csc(x)"
+            },
+            {
+              "id": "D",
+              "text": "−csc²(x)"
+            }
+          ],
+          "correctChoiceID": "D",
+          "explanation": "The derivative of cotangent is negative cosecant squared."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q5",
+          "number": 5,
+          "prompt": "d/dx sec(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "sec(x)tan(x)"
+            },
+            {
+              "id": "B",
+              "text": "−sec(x)tan(x)"
+            },
+            {
+              "id": "C",
+              "text": "csc(x)cot(x)"
+            },
+            {
+              "id": "D",
+              "text": "sec²(x)"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "Differentiate 1/cos(x): sin(x)/cos²(x) = sec(x)tan(x)."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q6",
+          "number": 6,
+          "prompt": "d/dx csc(x)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "csc(x)cot(x)"
+            },
+            {
+              "id": "B",
+              "text": "−csc(x)cot(x)"
+            },
+            {
+              "id": "C",
+              "text": "−sec(x)tan(x)"
+            },
+            {
+              "id": "D",
+              "text": "−csc²(x)"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "Differentiate 1/sin(x) to get −cos(x)/sin²(x)."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q7",
+          "number": 7,
+          "prompt": "d/dx sin(5x²)",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "cos(5x²)"
+            },
+            {
+              "id": "B",
+              "text": "5 cos(5x²)"
+            },
+            {
+              "id": "C",
+              "text": "10x cos(5x²)"
+            },
+            {
+              "id": "D",
+              "text": "−10x cos(5x²)"
+            }
+          ],
+          "correctChoiceID": "C",
+          "explanation": "The chain rule multiplies cos(5x²) by the derivative of 5x²."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q8",
+          "number": 8,
+          "prompt": "d/dx [sin(x)]²",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "2 cos(x)"
+            },
+            {
+              "id": "B",
+              "text": "cos²(x)"
+            },
+            {
+              "id": "C",
+              "text": "−2 sin(x)cos(x)"
+            },
+            {
+              "id": "D",
+              "text": "2 sin(x)cos(x)"
+            }
+          ],
+          "correctChoiceID": "D",
+          "explanation": "Differentiate the outer square, then the inner sine."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q9",
+          "number": 9,
+          "prompt": "d/dx [x cos(x)]",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "cos(x) − x sin(x)"
+            },
+            {
+              "id": "B",
+              "text": "−x sin(x)"
+            },
+            {
+              "id": "C",
+              "text": "cos(x) + x sin(x)"
+            },
+            {
+              "id": "D",
+              "text": "−sin(x)"
+            }
+          ],
+          "correctChoiceID": "A",
+          "explanation": "The product rule gives 1·cos(x) + x·(−sin(x))."
+        },
+        {
+          "id": "commonstudy-trig-derivatives-q10",
+          "number": 10,
+          "prompt": "If f(x) = tan(3x), find f′(0).",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "choices": [
+            {
+              "id": "A",
+              "text": "0"
+            },
+            {
+              "id": "B",
+              "text": "3"
+            },
+            {
+              "id": "C",
+              "text": "1"
+            },
+            {
+              "id": "D",
+              "text": "9"
+            }
+          ],
+          "correctChoiceID": "B",
+          "explanation": "f′(x) = 3 sec²(3x). Since sec(0) = 1, f′(0) = 3."
+        }
+      ]
+    }
+  ]
+}
+
