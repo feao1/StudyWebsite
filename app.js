@@ -76,7 +76,7 @@ function validateQuestion(q, setName, index) {
 }
 function normalized(value) { return String(value).replace(/[\s,]/g, '').replace(/−/g, '-').toLowerCase(); }
 function numeric(value) { const clean = normalized(value); if (clean.includes('/')) { const [a,b,...rest] = clean.split('/'); const top = Number(a), bottom = Number(b); return !rest.length && Number.isFinite(top) && Number.isFinite(bottom) && bottom !== 0 ? top / bottom : null; } const result = Number(clean); return Number.isFinite(result) ? result : null; }
-function correct(question, answer) { if (!nonempty(answer)) return false; if (!isText(question)) return answer === question.correctChoiceID; const entered = normalized(answer); return question.acceptedAnswers.some(expected => { const a = numeric(expected), b = numeric(entered); return a !== null && b !== null ? Math.abs(a-b) < 1e-9 : normalized(expected) === entered; }); }
+function correct(question, answer) { if (!nonempty(answer)) return false; if (!isText(question)) return answer === question.correctChoiceID; const entered = normalized(answer); return question.acceptedAnswers.some(expected => { const a = numeric(expected), b = numeric(entered); return a !== null && b !== null ? Math.abs(a-b) < 1e-9 : normalized(expected) === entered || EquivalentMath.equivalent(expected, answer); }); }
 function answerDisplay(question, answer) { if (!answer) return 'Not answered'; if (isText(question)) return answer; return question.choices.find(choice => choice.id === answer)?.id || answer; }
 function correctDisplay(question) { return isText(question) ? question.acceptedAnswers.join(' or ') : question.correctChoiceID; }
 

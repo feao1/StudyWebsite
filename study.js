@@ -13,7 +13,7 @@ let study = null;
 let studyClock = null;
 function shuffled(items) { const result = [...items]; for (let i=result.length-1;i>0;i--) {const j=Math.floor(Math.random()*(i+1)); [result[i],result[j]]=[result[j],result[i]];} return result; }
 function studyCards(set) { return set.questions.map(q => ({id:q.id,front:q.prompt,back:isText(q)?q.acceptedAnswers[0]:q.choices.find(c=>c.id===q.correctChoiceID).text,accepted:isText(q)?q.acceptedAnswers:[q.choices.find(c=>c.id===q.correctChoiceID).text],passage:q.passage||'',explanation:q.explanation||''})); }
-function matchesCard(card, answer) { const clean = text => {const s=String(text).replace(/`/g,'').normalize('NFKC').trim();return study.prefs.grading==='exact'?s:s.replace(/\s+/g,'').toLocaleLowerCase();}; return !!clean(answer) && card.accepted.some(value=>clean(value)===clean(answer)); }
+function matchesCard(card, answer) { const clean = text => {const s=String(text).replace(/`/g,'').normalize('NFKC').trim();return study.prefs.grading==='exact'?s:s.replace(/\s+/g,'').toLocaleLowerCase();}; return !!clean(answer) && card.accepted.some(value=>clean(value)===clean(answer) || (study.mode!=='spell' && EquivalentMath.equivalent(value,answer))); }
 function studyModeRows() { return `<div class="mode-grid">${Object.entries(STUDY_MODES).map(([key,[name,description]])=>`<button class="mode" data-study-mode="${key}"><strong>${name}</strong><small>${description}</small></button>`).join('')}</div>`; }
 function startStudy(mode) {
   if(!pendingSet||isSATSet(pendingSet.pack,pendingSet.set)||!STUDY_MODES[mode])return;
