@@ -19,3 +19,9 @@ Use **Import a set** with `.qpack` or `.txt`. Examples are in `examples/`. Text 
 Share next to a module copies its link. Included modules use short URLs. Imported modules up to 60 KB are encoded in the URL fragment; recipients can study without an account. Larger sets should be shared as files. Shared imports do not overwrite saved packs. Results and imports remain browser-local; they do not synchronize across devices or domains. Existing CommonStudy storage keys and schemas are retained, but browser storage on an old domain remains there.
 
 Fonts load from Google Fonts. No frontend build or server backend is required.
+
+## General study sets
+
+Non-SAT sets use Flashcards, Learn, Test, Write, Spell, Match, Blast and Blocks. Options saved per set include answer direction, shuffle, starred-only practice, Learn question types, test length/types and exact or relaxed written grading. Stars and preferences are local to this browser. These are independent implementations, not a Quizlet integration; classroom Live, accounts and AI semantic grading are not included.
+
+MathJax 3.2.2 loads from jsDelivr and renders explicit AsciiMath in backticks or LaTeX between \( and \). For example, backtick-delimited `1/sqrt(1-x^2)` becomes a typeset fraction. Math needs an internet connection. Written math answers use the original text notation; equivalent algebraic expressions are not automatically recognized.

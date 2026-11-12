@@ -13,24 +13,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q1",
           "number": 1,
-          "prompt": "d/dx arcsin(x), |x| < 1",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arcsin(x)`,  |x| < 1.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/√(1 − x²)"
+              "text": "`1/sqrt(1 - x^2)`"
             },
             {
               "id": "B",
-              "text": "−1/√(1 − x²)"
+              "text": "`-1/sqrt(1 - x^2)`"
             },
             {
               "id": "C",
-              "text": "1/(1 + x²)"
+              "text": "`1/(1 + x^2)`"
             },
             {
               "id": "D",
-              "text": "1/√(x² − 1)"
+              "text": "`1/sqrt(x^2 - 1)`"
             }
           ],
           "correctChoiceID": "A",
@@ -39,24 +39,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q2",
           "number": 2,
-          "prompt": "d/dx arccos(x), |x| < 1",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arccos(x)`,  |x| < 1.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/√(1 − x²)"
+              "text": "`1/sqrt(1 - x^2)`"
             },
             {
               "id": "B",
-              "text": "−1/√(1 − x²)"
+              "text": "`-1/sqrt(1 - x^2)`"
             },
             {
               "id": "C",
-              "text": "−1/(1 + x²)"
+              "text": "`-1/(1 + x^2)`"
             },
             {
               "id": "D",
-              "text": "1/(1 − x²)"
+              "text": "`1/(1 - x^2)`"
             }
           ],
           "correctChoiceID": "B",
@@ -65,24 +65,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q3",
           "number": 3,
-          "prompt": "d/dx arctan(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arctan(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/√(1 − x²)"
+              "text": "`1/sqrt(1 - x^2)`"
             },
             {
               "id": "B",
-              "text": "−1/(1 + x²)"
+              "text": "`-1/(1 + x^2)`"
             },
             {
               "id": "C",
-              "text": "1/(1 + x²)"
+              "text": "`1/(1 + x^2)`"
             },
             {
               "id": "D",
-              "text": "1/(1 − x²)"
+              "text": "`1/(1 - x^2)`"
             }
           ],
           "correctChoiceID": "C",
@@ -91,24 +91,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q4",
           "number": 4,
-          "prompt": "d/dx arccot(x), using the range (0, π)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx text(arccot)(x)`,  using the range (0, π).",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/(1 + x²)"
+              "text": "`1/(1 + x^2)`"
             },
             {
               "id": "B",
-              "text": "−1/√(1 − x²)"
+              "text": "`-1/sqrt(1 - x^2)`"
             },
             {
               "id": "C",
-              "text": "1/x"
+              "text": "`1/x`"
             },
             {
               "id": "D",
-              "text": "−1/(1 + x²)"
+              "text": "`-1/(1 + x^2)`"
             }
           ],
           "correctChoiceID": "D",
@@ -117,24 +117,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q5",
           "number": 5,
-          "prompt": "d/dx arcsec(x), |x| > 1",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx text(arcsec)(x)`,  |x| > 1.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/(|x|√(x² − 1))"
+              "text": "`1/(|x|sqrt(x^2 - 1))`"
             },
             {
               "id": "B",
-              "text": "1/(x√(1 − x²))"
+              "text": "`1/(xsqrt(1 - x^2))`"
             },
             {
               "id": "C",
-              "text": "−1/(|x|√(x² − 1))"
+              "text": "`-1/(|x|sqrt(x^2 - 1))`"
             },
             {
               "id": "D",
-              "text": "1/(1 + x²)"
+              "text": "`1/(1 + x^2)`"
             }
           ],
           "correctChoiceID": "A",
@@ -143,24 +143,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q6",
           "number": 6,
-          "prompt": "d/dx arccsc(x), |x| > 1",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx text(arccsc)(x)`,  |x| > 1.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/(|x|√(x² − 1))"
+              "text": "`1/(|x|sqrt(x^2 - 1))`"
             },
             {
               "id": "B",
-              "text": "−1/(|x|√(x² − 1))"
+              "text": "`-1/(|x|sqrt(x^2 - 1))`"
             },
             {
               "id": "C",
-              "text": "−1/√(1 − x²)"
+              "text": "`-1/sqrt(1 - x^2)`"
             },
             {
               "id": "D",
-              "text": "1/(x² − 1)"
+              "text": "`1/(x^2 - 1)`"
             }
           ],
           "correctChoiceID": "B",
@@ -169,24 +169,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q7",
           "number": 7,
-          "prompt": "d/dx arcsin(3x), |x| < 1/3",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arcsin(3x)`,  |x| < 1/3.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/√(1 − 9x²)"
+              "text": "`1/sqrt(1 - 9x^2)`"
             },
             {
               "id": "B",
-              "text": "3/√(1 − 3x²)"
+              "text": "`3/sqrt(1 - 3x^2)`"
             },
             {
               "id": "C",
-              "text": "3/√(1 − 9x²)"
+              "text": "`3/sqrt(1 - 9x^2)`"
             },
             {
               "id": "D",
-              "text": "−3/√(1 − 9x²)"
+              "text": "`-3/sqrt(1 - 9x^2)`"
             }
           ],
           "correctChoiceID": "C",
@@ -195,24 +195,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q8",
           "number": 8,
-          "prompt": "d/dx arctan(x²)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arctan(x^2)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "2x/(1 + x²)"
+              "text": "`2x/(1 + x^2)`"
             },
             {
               "id": "B",
-              "text": "1/(1 + x⁴)"
+              "text": "`1/(1 + x^4)`"
             },
             {
               "id": "C",
-              "text": "2/(1 + x⁴)"
+              "text": "`2/(1 + x^4)`"
             },
             {
               "id": "D",
-              "text": "2x/(1 + x⁴)"
+              "text": "`2x/(1 + x^4)`"
             }
           ],
           "correctChoiceID": "D",
@@ -221,24 +221,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q9",
           "number": 9,
-          "prompt": "d/dx arccos(√x), 0 < x < 1",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx arccos(sqrtx)`,  0 < x < 1.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "−1/(2√x√(1 − x))"
+              "text": "`-1/(2sqrtxsqrt(1 - x))`"
             },
             {
               "id": "B",
-              "text": "1/(2√x√(1 − x))"
+              "text": "`1/(2sqrtxsqrt(1 - x))`"
             },
             {
               "id": "C",
-              "text": "−1/√(1 − x)"
+              "text": "`-1/sqrt(1 - x)`"
             },
             {
               "id": "D",
-              "text": "−√x/(2√(1 − x))"
+              "text": "`-sqrtx/(2sqrt(1 - x))`"
             }
           ],
           "correctChoiceID": "A",
@@ -247,24 +247,24 @@ QPACK/1
         {
           "id": "commonstudy-inverse-trig-derivatives-q10",
           "number": 10,
-          "prompt": "If f(x) = arctan(2x), find f′(1).",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "If `f(x)=arctan(2x)`, find `f'(1)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "1/5"
+              "text": "`1/5`"
             },
             {
               "id": "B",
-              "text": "2/5"
+              "text": "`2/5`"
             },
             {
               "id": "C",
-              "text": "2/3"
+              "text": "`2/3`"
             },
             {
               "id": "D",
-              "text": "1/2"
+              "text": "`1/2`"
             }
           ],
           "correctChoiceID": "B",
@@ -274,4 +274,3 @@ QPACK/1
     }
   ]
 }
-

@@ -13,24 +13,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q1",
           "number": 1,
-          "prompt": "d/dx sin(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx sin(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "cos(x)"
+              "text": "`cos(x)`"
             },
             {
               "id": "B",
-              "text": "−cos(x)"
+              "text": "`-cos(x)`"
             },
             {
               "id": "C",
-              "text": "sin(x)"
+              "text": "`sin(x)`"
             },
             {
               "id": "D",
-              "text": "−sin(x)"
+              "text": "`-sin(x)`"
             }
           ],
           "correctChoiceID": "A",
@@ -39,24 +39,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q2",
           "number": 2,
-          "prompt": "d/dx cos(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx cos(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "sin(x)"
+              "text": "`sin(x)`"
             },
             {
               "id": "B",
-              "text": "−sin(x)"
+              "text": "`-sin(x)`"
             },
             {
               "id": "C",
-              "text": "cos(x)"
+              "text": "`cos(x)`"
             },
             {
               "id": "D",
-              "text": "−cos(x)"
+              "text": "`-cos(x)`"
             }
           ],
           "correctChoiceID": "B",
@@ -65,24 +65,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q3",
           "number": 3,
-          "prompt": "d/dx tan(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx tan(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "csc²(x)"
+              "text": "`csc^2(x)`"
             },
             {
               "id": "B",
-              "text": "−sec²(x)"
+              "text": "`-sec^2(x)`"
             },
             {
               "id": "C",
-              "text": "sec²(x)"
+              "text": "`sec^2(x)`"
             },
             {
               "id": "D",
-              "text": "sec(x)tan(x)"
+              "text": "`sec(x)tan(x)`"
             }
           ],
           "correctChoiceID": "C",
@@ -91,24 +91,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q4",
           "number": 4,
-          "prompt": "d/dx cot(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx cot(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "csc²(x)"
+              "text": "`csc^2(x)`"
             },
             {
               "id": "B",
-              "text": "sec²(x)"
+              "text": "`sec^2(x)`"
             },
             {
               "id": "C",
-              "text": "−cot(x)csc(x)"
+              "text": "`-cot(x)csc(x)`"
             },
             {
               "id": "D",
-              "text": "−csc²(x)"
+              "text": "`-csc^2(x)`"
             }
           ],
           "correctChoiceID": "D",
@@ -117,24 +117,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q5",
           "number": 5,
-          "prompt": "d/dx sec(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx sec(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "sec(x)tan(x)"
+              "text": "`sec(x)tan(x)`"
             },
             {
               "id": "B",
-              "text": "−sec(x)tan(x)"
+              "text": "`-sec(x)tan(x)`"
             },
             {
               "id": "C",
-              "text": "csc(x)cot(x)"
+              "text": "`csc(x)cot(x)`"
             },
             {
               "id": "D",
-              "text": "sec²(x)"
+              "text": "`sec^2(x)`"
             }
           ],
           "correctChoiceID": "A",
@@ -143,24 +143,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q6",
           "number": 6,
-          "prompt": "d/dx csc(x)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx csc(x)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "csc(x)cot(x)"
+              "text": "`csc(x)cot(x)`"
             },
             {
               "id": "B",
-              "text": "−csc(x)cot(x)"
+              "text": "`-csc(x)cot(x)`"
             },
             {
               "id": "C",
-              "text": "−sec(x)tan(x)"
+              "text": "`-sec(x)tan(x)`"
             },
             {
               "id": "D",
-              "text": "−csc²(x)"
+              "text": "`-csc^2(x)`"
             }
           ],
           "correctChoiceID": "B",
@@ -169,24 +169,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q7",
           "number": 7,
-          "prompt": "d/dx sin(5x²)",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx sin(5x^2)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "cos(5x²)"
+              "text": "`cos(5x^2)`"
             },
             {
               "id": "B",
-              "text": "5 cos(5x²)"
+              "text": "`5 cos(5x^2)`"
             },
             {
               "id": "C",
-              "text": "10x cos(5x²)"
+              "text": "`10x cos(5x^2)`"
             },
             {
               "id": "D",
-              "text": "−10x cos(5x²)"
+              "text": "`-10x cos(5x^2)`"
             }
           ],
           "correctChoiceID": "C",
@@ -195,24 +195,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q8",
           "number": 8,
-          "prompt": "d/dx [sin(x)]²",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx [sin(x)]^2`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "2 cos(x)"
+              "text": "`2 cos(x)`"
             },
             {
               "id": "B",
-              "text": "cos²(x)"
+              "text": "`cos^2(x)`"
             },
             {
               "id": "C",
-              "text": "−2 sin(x)cos(x)"
+              "text": "`-2 sin(x)cos(x)`"
             },
             {
               "id": "D",
-              "text": "2 sin(x)cos(x)"
+              "text": "`2 sin(x)cos(x)`"
             }
           ],
           "correctChoiceID": "D",
@@ -221,24 +221,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q9",
           "number": 9,
-          "prompt": "d/dx [x cos(x)]",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "Find `d/dx [x cos(x)]`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "cos(x) − x sin(x)"
+              "text": "`cos(x) - x sin(x)`"
             },
             {
               "id": "B",
-              "text": "−x sin(x)"
+              "text": "`-x sin(x)`"
             },
             {
               "id": "C",
-              "text": "cos(x) + x sin(x)"
+              "text": "`cos(x) + x sin(x)`"
             },
             {
               "id": "D",
-              "text": "−sin(x)"
+              "text": "`-sin(x)`"
             }
           ],
           "correctChoiceID": "A",
@@ -247,24 +247,24 @@ QPACK/1
         {
           "id": "commonstudy-trig-derivatives-q10",
           "number": 10,
-          "prompt": "If f(x) = tan(3x), find f′(0).",
-          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. Select the correct answer.",
+          "prompt": "If `f(x)=tan(3x)`, find `f'(0)`.",
+          "passage": "Use radians for trigonometric functions. Assume real variables and work where the expression is defined. ",
           "choices": [
             {
               "id": "A",
-              "text": "0"
+              "text": "`0`"
             },
             {
               "id": "B",
-              "text": "3"
+              "text": "`3`"
             },
             {
               "id": "C",
-              "text": "1"
+              "text": "`1`"
             },
             {
               "id": "D",
-              "text": "9"
+              "text": "`9`"
             }
           ],
           "correctChoiceID": "B",
@@ -274,4 +274,3 @@ QPACK/1
     }
   ]
 }
-

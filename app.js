@@ -110,6 +110,7 @@ function render() {
   clearInterval(timerHandle); timerHandle = null;
   if (route === 'exam') { renderExam(); return; }
   if (route === 'review') { renderReview(); return; }
+  if (route === 'study') { renderStudy(); return; }
   if (route === 'home') app.innerHTML = shell(home());
   if (route === 'mode') app.innerHTML = shell(modePicker());
   if (route === 'library') app.innerHTML = shell(library());
@@ -131,6 +132,7 @@ function chooseSet(packID, setID) {
 }
 function modePicker() {
   const { pack, set } = pendingSet;
+  if (!isSATSet(pack, set)) return studySetup(pack, set);
   return `<button class="quiet" data-route="home">‹ Back to sets</button>
   <header class="top section"><div><div class="eyebrow">${esc(pack.title)}</div><h1 id="mode-heading" tabindex="-1">How do you want to practice?</h1><p class="lede">${esc([set.section, set.title].filter(Boolean).join(' · '))} · ${set.questions.length} questions</p></div></header>
   <section class="section" aria-label="Question modes"><div class="mode-grid">${Object.entries(MODES).map(([key, mode]) => `<button class="mode" data-mode="${key}"><strong>${esc(mode.name)}</strong><small>${esc(mode.description)}</small></button>`).join('')}</div><p class="mode-hint">Choose a mode to start this set.</p></section>`;
