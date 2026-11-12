@@ -4,6 +4,7 @@ const EquivalentMath = (() => {
   function normalize(value) {
     if(String(value).length>300)throw Error('Expression too long');
     let s=String(value).trim().replace(/`/g,'').replace(/\\[()[\]]/g,'').replace(/\\(?:left|right)/g,'');
+    s=s.replace(/^y\s*=\s*/, '');
     s=s.replace(/[−–]/g,'-').replace(/[×·]/g,'*').replace(/÷/g,'/').replace(/π/g,'pi');
     s=s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]+/g,m=>'^('+[...m].map(c=>'⁰¹²³⁴⁵⁶⁷⁸⁹'.includes(c)?'⁰¹²³⁴⁵⁶⁷⁸⁹'.indexOf(c):'-').join('')+')');
     // Process innermost commands before ordinary grouping braces.
@@ -17,7 +18,7 @@ const EquivalentMath = (() => {
     s=s.replace(/\b(arcsin|arccos|arctan|arcsec|arccsc|arccot)\b/g,m=>({arcsin:'asin',arccos:'acos',arctan:'atan',arcsec:'asec',arccsc:'acsc',arccot:'acot'}[m]));
     s=s.replace(/\bln\b/g,'log').replace(/root\(3\)/g,'cbrt').replace(/∛\s*/g,'cbrt').replace(/√\s*/g,'sqrt');
     s=s.replace(/\|([^|]+)\|/g,'abs($1)');
-    s=s.replace(/\b(sqrt|cbrt)([a-z]|\d+(?:\.\d+)?)(?![a-z0-9])/g,'$1($2)');
+    s=s.replace(/(sqrt|cbrt)([a-z]|\d+(?:\.\d+)?)(?=$|[^a-z0-9]|sqrt|cbrt)/g,'$1($2)');
     s=s.replace(/\b(sin|cos|tan|sec|csc|cot)\s*\^\s*(\d+)\s*\(([^()]*)\)/g,'($1($3)^$2)');
     return s;
   }
